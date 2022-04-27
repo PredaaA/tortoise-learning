@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: tortoise-learning-db
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: testong
+
+  adminer:
+    container_name: tortoise-learning-adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
